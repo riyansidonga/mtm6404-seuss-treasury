@@ -1,14 +1,14 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 
 function Books() {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState([])
 
   useEffect(() => {
     fetch("https://seussology.info/api/books")
       .then((res) => res.json())
-      .then((data) => setBooks(data));
-  }, []);
+      .then((data) => setBooks(data))
+  }, [])
 
   return (
     <div>
@@ -25,7 +25,7 @@ function Books() {
         </Link>
       ))}
     </div>
-  );
+  )
 }
 
-export default Books;
+export default Books

@@ -8,10 +8,10 @@ function BookDetails() {
   useEffect(() => {
     fetch(`https://seussology.info/api/books/${id}`)
       .then((res) => res.json())
-      .then((data) => setBook(data));
-  }, [id]);
+      .then((data) => setBook(data))
+  }, [id])
 
-  if (!book) return <p>Loading...</p>;
+  if (!book) return <p>Loading...</p>
 
   return (
     <div>
@@ -19,7 +19,7 @@ function BookDetails() {
       <img src={book.image} alt={book.title} width="200" />
       <p>{book.description}</p>
     </div>
-  );
+  )
 }
 
-export default BookDetails;
+export default BookDetails
